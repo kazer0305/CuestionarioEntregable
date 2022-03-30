@@ -8,5 +8,6 @@ namespace CuestionarioEntregable
 {
     class RondaPregunta
     {
+        public int rondaActual { get; set; }
     }
 }

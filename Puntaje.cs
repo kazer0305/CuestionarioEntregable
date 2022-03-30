@@ -9,7 +9,8 @@ namespace CuestionarioEntregable
     class Puntaje
     {
         #region Propiedades
-        private int PuntajeGlobal { get; set; }
+        public int PuntajeGlobal { get; set; }
+        private int CantidadPartidas { get; set; }
         static int PuntajeMayorHistorico { get; set; }
 
         #endregion

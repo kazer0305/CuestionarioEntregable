@@ -17,5 +17,16 @@ namespace CuestionarioEntregable
             InitializeComponent();
         }
 
+        private void btnJugar_Click(object sender, EventArgs e)
+        {
+            Form2 MiForma2 = new Form2();
+            MiForma2.Show();
+        }
+
+        private void btnPuntaje_Click(object sender, EventArgs e)
+        {
+            Form3 MiForma3 = new Form3();
+            MiForma3.Show();
+        }
     }
 }

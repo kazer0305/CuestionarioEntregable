@@ -53,20 +53,7 @@ namespace CuestionarioEntregable
 
         public void EstablecerDificultad(int i)
         {
-            switch (i)
-            {
-                case 1:
-                    Dificultad = 1;
-                    break;
-
-                case 2:
-                    Dificultad = 2;
-                    break;
-
-                case 3:
-                    Dificultad = 3;
-                    break;
-            }
+            Dificultad = i;
         }
 
         public string ObtenerPregunta()
