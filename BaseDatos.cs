@@ -20,14 +20,12 @@ namespace CuestionarioEntregable
             set { rutabasedatos = value; }
         }
 
-        public static void Ordenar(DataTable TablaConsulta, ComboBox ComboBoxDocente, Button BtnBuscar)
+        public static void Ordenar(DataTable TablaConsulta)
         {
-            //Se limpia los resultados de la consulta anterior para evitar mostrar resultados de consultas anteriores
             TablaConsulta.Rows.Clear();
-            //Se crea un array de longitud igual a la cantidad de líneas del archivo
             string[] CantidadLineas = File.ReadAllLines(BaseDatos.RutaBaseDatos);
-            //Se instancia un array de longitud no definida
             string[] Valores;
+
             //Con este primer for se lee la cantidad de valores entre los separadores y estos valores se almacenan en el array Valores
             //Se crea un array Filas de longitud igual a la cantidad de líneas en el array Valores            
             for (int i = 0; i < CantidadLineas.Length; i++)
@@ -42,10 +40,6 @@ namespace CuestionarioEntregable
                 }
                 TablaConsulta.Rows.Add(Filas);
             }
-            //El siguiente es un filtro que se emplea para mostrar los resultados que se encuentra dentro de la ComboBoxDocente
-            TablaConsulta.DefaultView.RowFilter = string.Format("Docente LIKE '%{0}%'", ComboBoxDocente.Text);
-            //Desactiva el botón de busqueda una vez se haya realizado la consulta
-            BtnBuscar.Enabled = false;
         }
 
         public static void ExistenciaArchivo()

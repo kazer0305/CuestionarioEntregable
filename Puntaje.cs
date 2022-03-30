@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CuestionarioEntregable
 {
-    class Puntaje
+    public class Puntaje
     {
         #region Propiedades
         public int PuntajeAcumulado { get; set; }
-        private int CantidadPartidas { get; set; }
-        static int PuntajeMayorHistorico { get; set; }
+        public string NombreJugador { get; set; }
 
         #endregion
     }

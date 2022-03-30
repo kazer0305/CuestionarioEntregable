@@ -13,6 +13,8 @@ namespace CuestionarioEntregable
 {
     public partial class Form2 : Form
     {
+        Form1 frm = new Form1();
+
         //Variables enteras usadas para la operación del juego
 
         //La primera variable es empleada para almacenar números al azar que serán usados
@@ -51,6 +53,8 @@ namespace CuestionarioEntregable
         //Instancia de la clase Puntaje
         Puntaje MiPuntaje = new Puntaje();
 
+        Puntaje Ayuda = new Puntaje();
+
         //Instancia de la clase RondaPregunta
         RondaPregunta MiRonda = new RondaPregunta();
 
@@ -61,6 +65,7 @@ namespace CuestionarioEntregable
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Ayuda.NombreJugador = Form1.nombreJugador;
             //Cuando se abre el formulario se comienzad de forma inmediata cargando la primera ronda de pregunas
             //y asignado el valor de la ronda actual como igual a 1
             MiRonda.rondaActual = 1;
@@ -81,11 +86,34 @@ namespace CuestionarioEntregable
 
             if (MiRonda.rondaActual > 5)
             {
+                LlenadoDatosJugador();
                 this.Close();
             }
 
             EstablecerPreguntas();
             CargarPreguntas();
+        }
+
+        private void LlenadoDatosJugador()
+        {
+            Puntaje nuevoPuntaje = new Puntaje();
+
+            nuevoPuntaje.NombreJugador = Ayuda.NombreJugador;
+            nuevoPuntaje.PuntajeAcumulado = MiPuntaje.PuntajeAcumulado;
+
+            //-----------------------------------------------------------------------------------
+
+            //Se establece la ruta del archivo de texto plano Y Se instancia un objeto para escribir texto
+            //por medio de append se dirije hacia el último caracter del archivo de texto plano            
+            string Cadena = BaseDatos.RutaBaseDatos;
+            TextWriter Escritor = new StreamWriter(Cadena, append: true);
+
+            //Se utiliza Escritor para copiar en el bloc de notas todos los datos ingresados por el usuario
+            Escritor.Write("\t" + nuevoPuntaje.NombreJugador + "\t" + "|");
+            Escritor.Write("\t" + nuevoPuntaje.PuntajeAcumulado + "\t");
+            Escritor.WriteLine("");
+            //Se coerra el Text Writer
+            Escritor.Close();
         }
 
         static bool Contiene(int[] array, int value)
@@ -142,6 +170,7 @@ namespace CuestionarioEntregable
                 {
                     MessageBox.Show($"Incorrecto \nSu puntuación final es igual a: {MiPuntaje.PuntajeAcumulado} puntos",
                         "Respuesta fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LlenadoDatosJugador();
                     this.Close();
                 }
             }
@@ -175,6 +204,7 @@ namespace CuestionarioEntregable
                 {
                     MessageBox.Show($"Incorrecto \nSu puntuación acumulada final fue de: {MiPuntaje.PuntajeAcumulado} puntos",
                         "Respuesta fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LlenadoDatosJugador();
                     this.Close();
                 }
             }
