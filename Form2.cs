@@ -12,18 +12,19 @@ namespace CuestionarioEntregable
 {
     public partial class Form2 : Form
     {
+
+        Pregunta Mipregunta1 = new Pregunta();
+        Pregunta Mipregunta2 = new Pregunta();
+        Pregunta Mipregunta3 = new Pregunta();
+        Pregunta Mipregunta4 = new Pregunta();
+        Pregunta Mipregunta5 = new Pregunta();
+        Puntaje MiPuntaje = new Puntaje();
+
         public Form2()
         {
             InitializeComponent();
 
-            Pregunta Mipregunta1 = new Pregunta();
-            Pregunta Mipregunta2 = new Pregunta();
-            Pregunta Mipregunta3 = new Pregunta();
-            Pregunta Mipregunta4 = new Pregunta();
-            Pregunta Mipregunta5 = new Pregunta();
-            Puntaje MiPuntaje = new Puntaje();
-
-            #region Declaración Preguntas Categoría 1: Lenguajes de Programación.
+            #region Declaración Preguntas Categoría 1: Algunos Lenguajes de Programación.
 
             //Pregunta #1
             Mipregunta1.EstablecerDificultad(1);
@@ -77,7 +78,7 @@ namespace CuestionarioEntregable
 
             #endregion
 
-            #region Declaración Preguntas Categoría 2.
+            #region Declaración Preguntas Categoría 2: Conceptos de lenguajes de programación.
 
             //Pregunta #1
             Mipregunta1.EstablecerDificultad(2);
@@ -91,13 +92,13 @@ namespace CuestionarioEntregable
 
             //Pregunta #2
             Mipregunta2.EstablecerDificultad(2);
-            Mipregunta2.EstablecerPregunta("Una clase es...");
-            Mipregunta2.EstablecerRespuesta("Son varios objetos heredados");
-            Mipregunta2.EstablecerIncorrecta(1, "Un método de programación");
-            Mipregunta2.EstablecerIncorrecta(2, "Es una categoría del mismo tipo");
-            Mipregunta2.EstablecerIncorrecta(3, "Un paradigma de programación");
-            Mipregunta2.EstablecerIncorrecta(4, "Un ciclo de programación");
-            Mipregunta2.EstablecerIncorrecta(5, "Un entorno de programación integrado");
+            Mipregunta2.EstablecerPregunta("Es un paradigma de programación orientado a un modelo abstracto de la realidad.");
+            Mipregunta2.EstablecerRespuesta("Orientada a objetos");
+            Mipregunta2.EstablecerIncorrecta(1, "Funcional");
+            Mipregunta2.EstablecerIncorrecta(2, "Estructural");
+            Mipregunta2.EstablecerIncorrecta(3, "Lógico");
+            Mipregunta2.EstablecerIncorrecta(4, "Matemático");
+            Mipregunta2.EstablecerIncorrecta(5, "Procedimental");
 
             //Pregunta #3
             Mipregunta3.EstablecerDificultad(2);
@@ -111,27 +112,27 @@ namespace CuestionarioEntregable
 
             //Pregunta #4
             Mipregunta4.EstablecerDificultad(2);
-            Mipregunta4.EstablecerPregunta("El servidor es un proveedor de información y el cliente es un consumidor de información, nos referimos a...");
-            Mipregunta4.EstablecerRespuesta("Cliente-Servidor");
-            Mipregunta4.EstablecerIncorrecta(1, "Cliente");
-            Mipregunta4.EstablecerIncorrecta(2, "Aplicación en la nube");
-            Mipregunta4.EstablecerIncorrecta(3, "Servidor-Cliente");
-            Mipregunta4.EstablecerIncorrecta(4, "Nube-Cliente");
-            Mipregunta4.EstablecerIncorrecta(5, "Servidor-Cliente-Nube");
+            Mipregunta4.EstablecerPregunta("Son nombres de lenguajes de programación orientados a objetos.");
+            Mipregunta4.EstablecerRespuesta("Java, C++, Smalltalk, Python, Object Pascal, Visual .net, Visual Basic, Delphi, Perl");
+            Mipregunta4.EstablecerIncorrecta(1, "HTML, COBOL, C++, .NET, Lisp, VML, Java, PHP");
+            Mipregunta4.EstablecerIncorrecta(2, "Actionscript, COBOL, C++, .NET, PHP, Simula, PowerBuilder, Maya, entre otros");
+            Mipregunta4.EstablecerIncorrecta(3, "Visual Basic, Visual C++, Visual DialogScript, Visual Foxpro, Ensamblador, Borland c, Turbo C");
+            Mipregunta4.EstablecerIncorrecta(4, "Actionscript, COBOL, C#, .NET, PHP, Simula, PowerBuilder, Maya, entre otros");
+            Mipregunta4.EstablecerIncorrecta(5, "HTML, XML, VML, Java, PHP, C++, Fortran, Cobol, Lisp, entre otros");
 
             //Pregunta #5
             Mipregunta5.EstablecerDificultad(2);
-            Mipregunta5.EstablecerPregunta("¿Qué es un algoritmo?");
-            Mipregunta5.EstablecerRespuesta("Instrucciones lógicas con un propósito específico");
-            Mipregunta5.EstablecerIncorrecta(1, "Una estructura programada orientada a una sintaxis");
-            Mipregunta5.EstablecerIncorrecta(2, "Una forma de establecer paradigmas de programación");
-            Mipregunta5.EstablecerIncorrecta(3, "Código fuente");
-            Mipregunta5.EstablecerIncorrecta(4, "Una funcion matemática");
-            Mipregunta5.EstablecerIncorrecta(5, "Instrucciones lógicas de propósito general");
+            Mipregunta5.EstablecerPregunta("¿Que es un intérprete de lenguaje de programación?");
+            Mipregunta5.EstablecerRespuesta("Es un programa informático capaz de analizar y ejecutar otros programas, escritos en un lenguaje de alto nivel.");
+            Mipregunta5.EstablecerIncorrecta(1, "Es un programa que transforma código fuente escrito en java a un código neutral a la plataforma conocido como Java");
+            Mipregunta5.EstablecerIncorrecta(2, "Es un entorno de desarrollo integrado libre, hecho principalmente para el lenguaje de programación Java");
+            Mipregunta5.EstablecerIncorrecta(3, "Define los elementos de dicho lenguaje y cómo se combinan para formar un programa");
+            Mipregunta5.EstablecerIncorrecta(4, "Es un atributo de una parte de los datos que indica al ordenador (y/o al programador) algo sobre la clase de datos sobre los que se va a procesar");
+            Mipregunta5.EstablecerIncorrecta(5, "Es una orden que se le da al programa para realizar una tarea específica");
 
             #endregion
 
-            #region Declaración Preguntas Categoría 3.
+            #region Declaración Preguntas Categoría 3: Lógica de programación.
 
             //Pregunta #1
             Mipregunta1.EstablecerDificultad(3);
@@ -145,13 +146,13 @@ namespace CuestionarioEntregable
 
             //Pregunta #2
             Mipregunta2.EstablecerDificultad(3);
-            Mipregunta2.EstablecerPregunta("Uno de los motores de bases de datos más conocidos es...");
-            Mipregunta2.EstablecerRespuesta("MySQL");
-            Mipregunta2.EstablecerIncorrecta(1, "Excel");
-            Mipregunta2.EstablecerIncorrecta(2, "MATLAB");
-            Mipregunta2.EstablecerIncorrecta(3, "R Commander");
-            Mipregunta2.EstablecerIncorrecta(4, "VBasic");
-            Mipregunta2.EstablecerIncorrecta(5, "Microsoft Access");
+            Mipregunta2.EstablecerPregunta("var plan = customer == null ? plan.basico():customer.plan(); ¿Qué pasaría si el customer no existe?");
+            Mipregunta2.EstablecerRespuesta("El plan es el básico");
+            Mipregunta2.EstablecerIncorrecta(1, "El plan no se puede definir");
+            Mipregunta2.EstablecerIncorrecta(2, "El plan es según el consumidor");
+            Mipregunta2.EstablecerIncorrecta(3, "Saca un error en el código");
+            Mipregunta2.EstablecerIncorrecta(4, "El plan es igual a null");
+            Mipregunta2.EstablecerIncorrecta(5, "El plan básico pasar a ser según el consumidor");
 
             //Pregunta #3
             Mipregunta3.EstablecerDificultad(3);
@@ -173,69 +174,68 @@ namespace CuestionarioEntregable
             Mipregunta4.EstablecerIncorrecta(4, "SELECT PERSONAS");
             Mipregunta4.EstablecerIncorrecta(5, "SELECT * ALL PERSONAS");
 
-            //Pregunta #5
             Mipregunta5.EstablecerDificultad(3);
-            Mipregunta5.EstablecerPregunta("Los sistemas operativos que son libres y que están basados en Unix son:");
-            Mipregunta5.EstablecerRespuesta("Ubuntu");
-            Mipregunta5.EstablecerIncorrecta(1, "Windows");
-            Mipregunta5.EstablecerIncorrecta(2, "Mac");
-            Mipregunta5.EstablecerIncorrecta(3, "Debian");
-            Mipregunta5.EstablecerIncorrecta(4, "iOS");
-            Mipregunta5.EstablecerIncorrecta(5, "Macintosh");
+            Mipregunta5.EstablecerPregunta("El resultado de C, de la siguiente operación: C = 10 % 3;");
+            Mipregunta5.EstablecerRespuesta("C = 1");
+            Mipregunta5.EstablecerIncorrecta(1, "C = 2");
+            Mipregunta5.EstablecerIncorrecta(2, "C = 3");
+            Mipregunta5.EstablecerIncorrecta(3, "C = 3.33333");
+            Mipregunta5.EstablecerIncorrecta(4, "C = 0");
+            Mipregunta5.EstablecerIncorrecta(5, "Ninguna de las anteriores");
 
             #endregion
 
-            #region Declaración Preguntas Categoría 4.
+            #region Declaración Preguntas Categoría 4: Programación orientada a objetos.
 
             //Pregunta #1
             Mipregunta1.EstablecerDificultad(4);
-            Mipregunta1.EstablecerPregunta("Es un paradigma de programación orientado a un modelo abstracto de la realidad.");
-            Mipregunta1.EstablecerRespuesta("Orientada a objetos");
-            Mipregunta1.EstablecerIncorrecta(1, "Funcional");
-            Mipregunta1.EstablecerIncorrecta(2, "Estructural");
-            Mipregunta1.EstablecerIncorrecta(3, "Lógico");
-            Mipregunta1.EstablecerIncorrecta(4, "Matemático");
-            Mipregunta1.EstablecerIncorrecta(5, "Procedimental");
+            Mipregunta1.EstablecerPregunta("¿Que es la Herencia en Programación orientado a objetos?");
+            Mipregunta1.EstablecerRespuesta("Consiste en hacer uso de los atributos o métodos de una clase dentro de otra como si le perteneciera a este mismo");
+            Mipregunta1.EstablecerIncorrecta(1, "Son similares a las variables de instancia, con la excepción de que los valores que guardan son los mismos para todos los objetos de una clase");
+            Mipregunta1.EstablecerIncorrecta(2, "Es un nombre que identifica a una variable, a un método o función miembro, a una clase");
+            Mipregunta1.EstablecerIncorrecta(3, "Define los elementos de dicho lenguaje y cómo se combinan para formar un programa");
+            Mipregunta1.EstablecerIncorrecta(4, "Es una orden que se le da al programa para realizar una tarea específica");
+            Mipregunta1.EstablecerIncorrecta(5, "Es un método especial de una clase que se llama automáticamente siempre que se declara un objeto de esa clase");
 
             //Pregunta #2
             Mipregunta2.EstablecerDificultad(4);
-            Mipregunta2.EstablecerPregunta("Son parte de los tipos de variables que se manejan en Programación.");
-            Mipregunta2.EstablecerRespuesta("String, Boolean, Char, Integer, int, Double, Float");
-            Mipregunta2.EstablecerIncorrecta(1, "De Actionscript, COBOL, C#, .NET, PHP, Simula, PowerBuilder, Maya, entre otros");
-            Mipregunta2.EstablecerIncorrecta(2, "Cadena, Boleano, Carácter, Numeros, Entero, Cadena, Boleano, Carácter, Numeros, Entero, entre otros");
-            Mipregunta2.EstablecerIncorrecta(3, "Tipo Java, C++, Smalltalk, Python, Object Pascal, Visual .net, Visual Basic, Delphi, Perl, entre otros");
-            Mipregunta2.EstablecerIncorrecta(4, "Simbólicos, de estructura, de cadena, de complemento, generales, particulares, entre otros");
-            Mipregunta2.EstablecerIncorrecta(5, "HTML, XML, VML, Java, PHP, C++, Fortran, Cobol, Lisp, entre otros");
+            Mipregunta2.EstablecerPregunta("Una clase es...");
+            Mipregunta2.EstablecerRespuesta("Son varios objetos heredados");
+            Mipregunta2.EstablecerIncorrecta(1, "Un método de programación");
+            Mipregunta2.EstablecerIncorrecta(2, "Es una categoría del mismo tipo");
+            Mipregunta2.EstablecerIncorrecta(3, "Un paradigma de programación");
+            Mipregunta2.EstablecerIncorrecta(4, "Un ciclo de programación");
+            Mipregunta2.EstablecerIncorrecta(5, "Un entorno de programación integrado");
 
             //Pregunta #3
             Mipregunta3.EstablecerDificultad(4);
-            Mipregunta3.EstablecerPregunta("Son nombres de lenguajes de programación orientado a objetos.");
-            Mipregunta3.EstablecerRespuesta("Java, C++, Smalltalk, Python, Object Pascal, Visual .net, Visual Basic, Delphi, Perl");
-            Mipregunta3.EstablecerIncorrecta(1, "HTML, COBOL, C++, .NET, Lisp, VML, Java, PHP");
-            Mipregunta3.EstablecerIncorrecta(2, "Actionscript, COBOL, C++, .NET, PHP, Simula, PowerBuilder, Maya, entre otros");
-            Mipregunta3.EstablecerIncorrecta(3, "Visual Basic, Visual C++, Visual DialogScript, Visual Foxpro, Ensamblador, Borland c, Turbo C");
-            Mipregunta3.EstablecerIncorrecta(4, "Actionscript, COBOL, C#, .NET, PHP, Simula, PowerBuilder, Maya, entre otros");
-            Mipregunta3.EstablecerIncorrecta(5, "HTML, XML, VML, Java, PHP, C++, Fortran, Cobol, Lisp, entre otros");
+            Mipregunta3.EstablecerPregunta("¿Que es la encapsulación en Programación orientado a objetos?");
+            Mipregunta3.EstablecerRespuesta("Es la forma de proteger u ocultar las propiedades de un objeto");
+            Mipregunta3.EstablecerIncorrecta(1, "Son varios objetos heredados");
+            Mipregunta3.EstablecerIncorrecta(2, "Consiste en hacer uso de los atributos o métodos de una clase dentro de otra como si le perteneciera a este mismo");
+            Mipregunta3.EstablecerIncorrecta(3, "Es un nombre que identifica a una variable, a un método o función miembro, a una clase");
+            Mipregunta3.EstablecerIncorrecta(4, "Es asignar una variable dentro de otra de forma sucesiva, quedando esta encapsulada");
+            Mipregunta3.EstablecerIncorrecta(5, "Ninguna de las anteriores");
 
             //Pregunta #4
             Mipregunta4.EstablecerDificultad(4);
-            Mipregunta4.EstablecerPregunta("¿Que es una unidad de almacenamiento?");
-            Mipregunta4.EstablecerRespuesta("Son dispositivos periféricos del sistema, que actúan como medio de soporte para la grabación de programas de usuario, así como de datos y archivos.");
-            Mipregunta4.EstablecerIncorrecta(1, "Es un Disco duro que sirve para Formateo de sistema operativo y para su uso posterior");
-            Mipregunta4.EstablecerIncorrecta(2, "Es aquella que tiene relación con el almacenamiento de la Información y sus usos; es más cercana a las Personas y Computadoras");
-            Mipregunta4.EstablecerIncorrecta(3, "Están construidos de material plástico flexible, el cual está recubierto de material magnético (ferromagnético) sobre el cual se grabarán los datos");
-            Mipregunta4.EstablecerIncorrecta(4, "Unidad encargada de procesar datos de forma permanente durante la operación de computador");
+            Mipregunta4.EstablecerPregunta("¿Que es el polimorfismo en Programación orientado a objetos?");
+            Mipregunta4.EstablecerRespuesta("Podemos definirlo como la capacidad que tienen los objetos de comportarse de múltiples formas recurriendo a la herencia");
+            Mipregunta4.EstablecerIncorrecta(1, "Es la forma de proteger u ocultar las propiedades de un objeto");
+            Mipregunta4.EstablecerIncorrecta(2, "Son varios objetos heredados");
+            Mipregunta4.EstablecerIncorrecta(3, "Consiste en hacer uso de los atributos o métodos de una clase dentro de otra como si le perteneciera a este mismo");
+            Mipregunta4.EstablecerIncorrecta(4, "Consiste en tener un método con el mismo nombre pero diferentes parámetros.");
             Mipregunta4.EstablecerIncorrecta(5, "Ninguna de las anteriores");
 
             //Pregunta #5
             Mipregunta5.EstablecerDificultad(4);
-            Mipregunta5.EstablecerPregunta("Permite crear un archivo “.jar” en NetBeans");
-            Mipregunta5.EstablecerRespuesta("Shift +F11");
-            Mipregunta5.EstablecerIncorrecta(1, "Shift +F10");
-            Mipregunta5.EstablecerIncorrecta(2, "Shift +F9");
-            Mipregunta5.EstablecerIncorrecta(3, "Shift +F2");
-            Mipregunta5.EstablecerIncorrecta(4, "Shift +F8");
-            Mipregunta5.EstablecerIncorrecta(5, "Ninguna de las anteriores");
+            Mipregunta5.EstablecerPregunta("¿Que es Sobrecarga de métodos?");
+            Mipregunta5.EstablecerRespuesta("Ninguna de las anteriores");
+            Mipregunta5.EstablecerIncorrecta(1, "Podemos definirlo como la capacidad que tienen los objetos de comportarse de múltiples formas recurriendo a la herencia");
+            Mipregunta5.EstablecerIncorrecta(2, "Consiste en hacer uso de los atributos o métodos de una clase dentro de otra como si le perteneciera a este mismo");
+            Mipregunta5.EstablecerIncorrecta(3, "Es la forma de proteger u ocultar las propiedades de un objeto");
+            Mipregunta5.EstablecerIncorrecta(4, "Podemos definirlo como la capacidad que tienen los objetos de comportarse de múltiples formas recurriendo a la herencia");
+            Mipregunta5.EstablecerIncorrecta(5, "No es un concepto empleado en POO");
 
             #endregion
 
@@ -243,13 +243,13 @@ namespace CuestionarioEntregable
 
             //Pregunta #1
             Mipregunta1.EstablecerDificultad(5);
-            Mipregunta1.EstablecerPregunta("var plan = customer == null ? plan.basico():customer.plan(); ¿Qué pasaría si el customer no existe?");
-            Mipregunta1.EstablecerRespuesta("El plan es el básico");
-            Mipregunta1.EstablecerIncorrecta(1, "El plan no se puede definir");
-            Mipregunta1.EstablecerIncorrecta(2, "El plan es según el consumidor");
-            Mipregunta1.EstablecerIncorrecta(3, "Saca un error en el código");
-            Mipregunta1.EstablecerIncorrecta(4, "El plan es igual a null");
-            Mipregunta1.EstablecerIncorrecta(5, "El plan básico pasar a ser según el consumidor");
+            Mipregunta1.EstablecerPregunta("Permite crear un archivo “.jar” en NetBeans");
+            Mipregunta1.EstablecerRespuesta("Shift +F11");
+            Mipregunta1.EstablecerIncorrecta(1, "Shift +F10");
+            Mipregunta1.EstablecerIncorrecta(2, "Shift +F9");
+            Mipregunta1.EstablecerIncorrecta(3, "Shift +F2");
+            Mipregunta1.EstablecerIncorrecta(4, "Shift +F8");
+            Mipregunta1.EstablecerIncorrecta(5, "Ninguna de las anteriores");
 
             //Pregunta #2
             Mipregunta2.EstablecerDificultad(5);
@@ -260,36 +260,36 @@ namespace CuestionarioEntregable
             Mipregunta2.EstablecerIncorrecta(3, "JDK, IDE, Clases, Objetos");
             Mipregunta2.EstablecerIncorrecta(4, "Nombre del Paquete, Atributos, JDK, IDE");
             Mipregunta2.EstablecerIncorrecta(5, "Creacion del archivo .Jar, Nombre del Paquete, Atributos, JDK");
-
+            
             //Pregunta #3
             Mipregunta3.EstablecerDificultad(5);
-            Mipregunta3.EstablecerPregunta("¿Que es la Herencia en Programación orientado a objetos?");
-            Mipregunta3.EstablecerRespuesta("Consiste en hacer uso de los atributos o métodos de una clase dentro de otra como si le perteneciera a este mismo");
-            Mipregunta3.EstablecerIncorrecta(1, "Son similares a las variables de instancia, con la excepción de que los valores que guardan son los mismos para todos los objetos de una clase");
-            Mipregunta3.EstablecerIncorrecta(2, "Es un nombre que identifica a una variable, a un método o función miembro, a una clase");
-            Mipregunta3.EstablecerIncorrecta(3, "Define los elementos de dicho lenguaje y cómo se combinan para formar un programa");
-            Mipregunta3.EstablecerIncorrecta(4, "Es una orden que se le da al programa para realizar una tarea específica");
-            Mipregunta3.EstablecerIncorrecta(5, "Es un método especial de una clase que se llama automáticamente siempre que se declara un objeto de esa clase");
+            Mipregunta3.EstablecerPregunta("¿Qué librería hay que importar para poder introducir un integer?");
+            Mipregunta3.EstablecerRespuesta("java.util.Scanner;");
+            Mipregunta3.EstablecerIncorrecta(1, "javax.util.Scanner;");
+            Mipregunta3.EstablecerIncorrecta(2, "java.text.Scanner;");
+            Mipregunta3.EstablecerIncorrecta(3, "javax.text.Scanner;");
+            Mipregunta3.EstablecerIncorrecta(4, "java.text.Math;");
+            Mipregunta3.EstablecerIncorrecta(5, "javax.text.Math;");
 
             //Pregunta #4
             Mipregunta4.EstablecerDificultad(5);
-            Mipregunta4.EstablecerPregunta("¿Que es una Biblioteca de clases?");
-            Mipregunta4.EstablecerRespuesta("Es un grupo de clases diseñada para su uso con otros programas");
-            Mipregunta4.EstablecerIncorrecta(1, "Es un programa que transforma código fuente escrito en java a un código neutral a la plataforma conocido como java");
-            Mipregunta4.EstablecerIncorrecta(2, "Es módulo ordenado de elementos para la computadora que se encuentran interrelacionados y que interactúan entre sí, en apoyo al usuario");
-            Mipregunta4.EstablecerIncorrecta(3, "Es un lenguaje de programación de bajo nivel para los computadores, microprocesadores, microcontroladores y otros circuitos integrados programables");
-            Mipregunta4.EstablecerIncorrecta(4, "Es un atributo de una parte de los datos que indica al ordenador (y/o al programador) algo sobre la clase de datos sobre los que se va a procesar");
-            Mipregunta4.EstablecerIncorrecta(5, "Define los elementos de dicho lenguaje y cómo se combinan para formar un programa");
+            Mipregunta4.EstablecerPregunta("¿Cómo se pasa este String a char? String text = 'W';");
+            Mipregunta4.EstablecerRespuesta("text.charAt(0);");
+            Mipregunta4.EstablecerIncorrecta(1, "text.parseString();");
+            Mipregunta4.EstablecerIncorrecta(2, "String.toChar(text);");
+            Mipregunta4.EstablecerIncorrecta(3, "Char.toChar(text);");
+            Mipregunta4.EstablecerIncorrecta(4, "Char.toString(text);");
+            Mipregunta4.EstablecerIncorrecta(5, "Char.toString(0);");
 
             //Pregunta #5
             Mipregunta5.EstablecerDificultad(5);
-            Mipregunta5.EstablecerPregunta("¿Que es un intérprete?");
-            Mipregunta5.EstablecerRespuesta("Es un programa informático capaz de analizar y ejecutar otros programas, escritos en un lenguaje de alto nivel.");
-            Mipregunta5.EstablecerIncorrecta(1, "Es un programa que transforma código fuente escrito en java a un código neutral a la plataforma conocido como Java");
-            Mipregunta5.EstablecerIncorrecta(2, "Es un entorno de desarrollo integrado libre, hecho principalmente para el lenguaje de programación Java");
-            Mipregunta5.EstablecerIncorrecta(3, "Define los elementos de dicho lenguaje y cómo se combinan para formar un programa");
-            Mipregunta5.EstablecerIncorrecta(4, "Es un atributo de una parte de los datos que indica al ordenador (y/o al programador) algo sobre la clase de datos sobre los que se va a procesar");
-            Mipregunta5.EstablecerIncorrecta(5, "Es una orden que se le da al programa para realizar una tarea específica");
+            Mipregunta5.EstablecerPregunta("Si no se especifica una súper clase se asume que se hereda de la clase:");
+            Mipregunta5.EstablecerRespuesta("Objects");
+            Mipregunta5.EstablecerIncorrecta(1, "Extends");
+            Mipregunta5.EstablecerIncorrecta(2, "Implements");
+            Mipregunta5.EstablecerIncorrecta(3, "Interface");
+            Mipregunta5.EstablecerIncorrecta(4, "Abstract");
+            Mipregunta5.EstablecerIncorrecta(5, "Document");
 
             #endregion
 
