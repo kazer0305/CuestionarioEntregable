@@ -51,11 +51,6 @@ namespace CuestionarioEntregable
             }
         }
 
-        public void EstablecerDificultad(int i)
-        {
-            Dificultad = i;
-        }
-
         public string ObtenerPregunta()
         {
             return TextoPregunta;
@@ -84,11 +79,6 @@ namespace CuestionarioEntregable
             }
         }
 
-        public int ObtenerDificultad()
-        {
-            return Dificultad;
-        }
-
         #endregion
 
         #region Propiedades
@@ -103,7 +93,6 @@ namespace CuestionarioEntregable
         private string Incorrecta3;
         private string Incorrecta4;
         private string Incorrecta5;
-        private int Dificultad;
 
         #endregion
     }
