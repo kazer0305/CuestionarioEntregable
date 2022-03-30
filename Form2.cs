@@ -73,26 +73,6 @@ namespace CuestionarioEntregable
             CargarPreguntas();
         }
 
-        private void rb1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rb2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rb3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rb4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             ChequearRespuestas();
@@ -132,34 +112,71 @@ namespace CuestionarioEntregable
 
         public void ChequearRespuestas()
         {
-            if (rb1.Checked && rb1.Text == PreguntaArealizar.ObtenerRespuesta())
+            if (MiRonda.rondaActual < 5)
             {
-                MessageBox.Show("Correcto");
-                MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
-                MessageBox.Show(MiPuntaje.PuntajeAcumulado.ToString());
-            }
-            else if (rb2.Checked && rb2.Text == PreguntaArealizar.ObtenerRespuesta())
-            {
-                MessageBox.Show("Correcto");
-                MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
-                MessageBox.Show(MiPuntaje.PuntajeAcumulado.ToString());
-            }
-            else if (rb3.Checked && rb3.Text == PreguntaArealizar.ObtenerRespuesta())
-            {
-                MessageBox.Show("Correcto");
-                MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
-                MessageBox.Show(MiPuntaje.PuntajeAcumulado.ToString());
-            }
-            else if (rb4.Checked && rb4.Text == PreguntaArealizar.ObtenerRespuesta())
-            {
-                MessageBox.Show("Correcto");
-                MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
-                MessageBox.Show(MiPuntaje.PuntajeAcumulado.ToString());
+                if (rb1.Checked && rb1.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
+                    MessageBox.Show($"Correcto \nSu puntuación acumulada es igual a: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (rb2.Checked && rb2.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
+                    MessageBox.Show($"Correcto \nSu puntuación acumulada es igual a: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (rb3.Checked && rb3.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
+                    MessageBox.Show($"Correcto \nSu puntuación acumulada es igual a: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (rb4.Checked && rb4.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += IntPow(2, MiRonda.rondaActual);
+                    MessageBox.Show($"Correcto \nSu puntuación acumulada es igual a: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"Incorrecto \nSu puntuación final es igual a: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
             }
             else
             {
-                MessageBox.Show("Incorrecto");
-                this.Close();
+                if (rb1.Checked && rb1.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += 50;
+                    MessageBox.Show($"Correcto Juego finalizado\nSu puntuación acumulada final fue de: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (rb2.Checked && rb2.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += 50;
+                    MessageBox.Show($"Correcto Juego finalizado\nSu puntuación acumulada final fue de: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (rb3.Checked && rb3.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += 50;
+                    MessageBox.Show($"Correcto Juego finalizado\nSu puntuación acumulada final fue de: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (rb4.Checked && rb4.Text == PreguntaArealizar.ObtenerRespuesta())
+                {
+                    MiPuntaje.PuntajeAcumulado += 50;
+                    MessageBox.Show($"Correcto Juego finalizado\nSu puntuación acumulada final fue de: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta Correcta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show($"Incorrecto \nSu puntuación acumulada final fue de: {MiPuntaje.PuntajeAcumulado} puntos",
+                        "Respuesta fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
             }
         }
 

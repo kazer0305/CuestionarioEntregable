@@ -38,11 +38,11 @@ namespace CuestionarioEntregable
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(311, 27);
+            this.label1.Location = new System.Drawing.Point(277, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 46);
+            this.label1.Size = new System.Drawing.Size(326, 46);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Puntaje";
+            this.label1.Text = "Puntaje Jugador";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form3

@@ -60,7 +60,6 @@ namespace CuestionarioEntregable
             this.rb1.TabStop = true;
             this.rb1.Text = "rb1";
             this.rb1.UseVisualStyleBackColor = true;
-            this.rb1.CheckedChanged += new System.EventHandler(this.rb1_CheckedChanged);
             // 
             // rb2
             // 
@@ -73,7 +72,6 @@ namespace CuestionarioEntregable
             this.rb2.TabStop = true;
             this.rb2.Text = "radioButton1";
             this.rb2.UseVisualStyleBackColor = true;
-            this.rb2.CheckedChanged += new System.EventHandler(this.rb2_CheckedChanged);
             // 
             // rb3
             // 
@@ -86,7 +84,6 @@ namespace CuestionarioEntregable
             this.rb3.TabStop = true;
             this.rb3.Text = "radioButton2";
             this.rb3.UseVisualStyleBackColor = true;
-            this.rb3.CheckedChanged += new System.EventHandler(this.rb3_CheckedChanged);
             // 
             // rb4
             // 
@@ -99,7 +96,6 @@ namespace CuestionarioEntregable
             this.rb4.TabStop = true;
             this.rb4.Text = "radioButton3";
             this.rb4.UseVisualStyleBackColor = true;
-            this.rb4.CheckedChanged += new System.EventHandler(this.rb4_CheckedChanged);
             // 
             // btnSiguiente
             // 
